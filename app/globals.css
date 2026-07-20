@@ -73,13 +73,19 @@ button { color: inherit; }
 }
 .player-card.berry { --card: #a84268; --card-deep: #5c1736; }
 .player-card.ocean { --card: #1597a7; --card-deep: #075762; }
-.player-card:hover, .player-card:focus-visible { transform: translateY(-10px); box-shadow: 0 22px 52px rgba(46,36,35,.18); outline: none; }
+.player-card:not(:disabled):hover, .player-card:focus-visible { transform: translateY(-10px); box-shadow: 0 22px 52px rgba(46,36,35,.18); outline: none; }
 .player-card:focus-visible { box-shadow: 0 0 0 4px #fff, 0 0 0 8px var(--card), 0 22px 52px rgba(46,36,35,.18); }
+.player-card.unavailable { cursor: default; opacity: .58; box-shadow: 0 10px 28px rgba(46,36,35,.07); }
+.player-card.complete { opacity: .76; }
+.player-card.unavailable:not(.complete) img { filter: grayscale(.72) saturate(.45); }
+.journey-status { position: absolute; left: 25px; top: 20px; z-index: 3; padding: 7px 11px; border-radius: 999px; color: white; background: #161923ba; backdrop-filter: blur(6px); font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.journey-status.ready { background: var(--card-deep); }
+.journey-status.done { background: #356c4c; }
 .card-number { position: absolute; right: 25px; top: 23px; z-index: 2; color: white; font-size: 12px; letter-spacing: .15em; font-weight: 700; text-shadow: 0 1px 4px #0006; }
 .portrait-wrap { display: block; aspect-ratio: 1 / 1.08; overflow: hidden; border-radius: 150px 150px 18px 18px; position: relative; background: var(--card); }
 .portrait-wrap::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 58%, var(--card-deep)); opacity: .35; }
 .portrait-wrap img { width: 100%; height: 100%; display: block; object-fit: cover; filter: saturate(.92) contrast(1.02); transition: transform .5s ease; }
-.player-card:hover img { transform: scale(1.035); }
+.player-card:not(:disabled):hover img { transform: scale(1.035); }
 .world-icon { position: absolute; z-index: 2; right: 17px; bottom: 16px; width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; background: white; font-size: 27px; box-shadow: 0 8px 20px #0003; }
 .card-copy { display: block; padding: 21px 10px 16px; }
 .player-meta { color: var(--card); font-size: 11px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; display: block; margin-bottom: 5px; }
