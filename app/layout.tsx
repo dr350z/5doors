@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "The Three Doorways | A Family Puzzle Adventure",
-  description: "Choose Jen, Clara or Atticus and unlock five magical puzzle doors.",
+  description: "Help Atticus, Clara and Jen complete a 15-door family puzzle relay.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

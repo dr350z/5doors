@@ -4,12 +4,12 @@ A personalised family puzzle adventure for Jen, Clara and Atticus. Each hero ent
 
 ## Features
 
-- One shared character-selection screen
-- Three independent five-door adventures
-- Hints, sequential unlocking and completion celebrations
+- One shared three-hero adventure
+- Atticus completes five doors first, followed by Clara and then Jen
+- Hints, sequential door unlocking and completion celebrations
 - Device-local progress saving
 - Responsive controls for phones, tablets and desktop browsers
-- Jen's final surprise link after completing all five puzzles
+- The final `surprise.zenhuang.com` reward after all 15 doors are complete
 
 ## Run locally
 
@@ -32,7 +32,7 @@ npm run build
 
 No environment variables are required.
 
-## Publish at `zenhuang.com/5doors`
+## Publish at `5doors.zenhuang.com`
 
-A domain record attaches to a hostname, not a URL path. Configure the existing `zenhuang.com` project or hosting layer to rewrite `/5doors` to the Vercel deployment. A subdomain such as `5doors.zenhuang.com` can instead be attached directly in Vercel.
+Attach `5doors.zenhuang.com` directly to this project in Vercel under **Settings → Domains**. No base path or rewrite is required.
 
